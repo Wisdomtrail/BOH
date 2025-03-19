@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <form id="otpForm" class="form">
+            <img src="./logo.png" alt="">
+            <div class="contactHeader">
+                <h2>Code Authentication</h2>
+            </div>
+            <p>Please enter the one time authentication code we sent to you.</p>
+            <input type="text" id="otpInput" placeholder="X X X X X X" required><br><br>
+            <button type="submit">Verify OTP</button> 
+            <div class="footer">
+                <div class="f1">
+                    <p>Location</p>
+                </div>
+                <div class="f2">
+                    <p>Privacy Policy</p>
+                </div>
+            </div>      
+        </form>
+    </div>
+
+    <script src="./otp2.js"></script>
+</body>
+
+</html>

